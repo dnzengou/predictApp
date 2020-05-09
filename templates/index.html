@@ -1,29 +1,35 @@
 <!DOCTYPE html>
-<html >
+<html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
   <meta charset="UTF-8">
+    <meta name="author" content="me">
   <title>PredictivApp</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   
 </head>
 
-<body style="background: #000;">
+<body>
+    <div class="jumbotron">
+
+  <div class="container text-center">
  <div class="login">
-	<h1>Passengers Survivorship</h1>
+	<h1 style="color:green">Passengers Survivorship</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="Pclass" placeholder="Pclass" required="required" />
-        <input type="text" name="Age" placeholder="Age" required="required" />
-		<input type="text" name="SibSp" placeholder="SibSp" required="required" />
-		<input type="text" name="Fare" placeholder="Fare" required="required" />
+    	<input type="text" name="Pclass" placeholder="Pclass" required="required" / style="background-color:#fff; color:green; border-style: outset;">
+        <input type="text" name="Age" placeholder="Age" required="required" / style="background-color:#fff; color:green; border-style: outset;">
+		<input type="text" name="SibSp" placeholder="SibSp" required="required" / style="background-color:#fff; color:green; border-style: outset;">
+		<input type="text" name="Fare" placeholder="Fare" required="required" / style="background-color:#fff; color:green; border-style: outset;">
 
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict passengers survivorship</button>
+        <button type="submit" class="btn btn-success btn-block btn-large">Predict passengers survivorship</button>
     </form>
 
    <br>
@@ -31,6 +37,49 @@
    {{ prediction_text }}
 
  </div>
+</div>
+
+</div>
+
+<br>
+</br>
+
+<br>
+</br>
+
+<br>
+</br>
+
+<br>
+</br>
+
+<br>
+</br>
+
+<br>
+</br>
+
+<br>
+</br>
+
+<br>
+</br>
+
+<br>
+
+<footer id="footer">
+  <ul class="text-center">
+ <p style="color:darkgrey">&copy; 2020 - PredictivApp</a> - by <a href="desireyavro.com">desireyavro</a> with <i class="fa fa-coffee" style="color:brown"></i> and <i class="fa fa-heart" style="color:pink"></i></p>
+  <code style="color:darkgrey"><strong>Disclaimer</strong>: These tools are for basic research and educational purposes, and are intended to be used for support only and not for decision-making. Therefore many limitations remain on the use and interpretation of this simple predictive model.
+    This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) License</code>
+  </ul>
+</footer>
+
+  <!-- scripts -->
+  <script src="assets/scripts/typewrite.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 
 
 </body>
