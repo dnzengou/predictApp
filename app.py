@@ -1,4 +1,4 @@
-#import numpy as np
+import numpy as np
 import pandas as pd
 from flask import Flask, jsonify, request, render_template
 import pickle
@@ -39,7 +39,7 @@ def predict():
 
     # return data
     #return jsonify(results=output)
-    return render_template('index.html', prediction_text='Passenger survived (1 - Yes, 0 - No): {}'.format(output))
+    return render_template('index.html', prediction_text='Passenger survived? {}'.format(output))
 
 @app.route('/results',methods=['POST'])
 def results():
