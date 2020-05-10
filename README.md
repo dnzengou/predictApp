@@ -21,6 +21,8 @@ response = requests.post(url, json.dumps(data))
 print(response.json())
 ```
 
+[app](img/predictApp-img.png)
+
 # Inspiration
 ## Article
 
